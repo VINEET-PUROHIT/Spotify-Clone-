@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top1"><img src="img/spotify logo.png" /></div>
+      <div class="top2">
+        <div class="box"><img src="img/home.png" /></div>
+        <input type="text" placeholder="What do you want to play ?" />
+      </div>
+      <div class="top3">
+        <div class="box2">
+          <img src="img/download.png" height="25px" />
+          <p>Install App</p>
+        </div>
+        <img src="img/bell.png" alt="" height="25px" />
+        <img src="img/friend.png" alt="" height="25px" />
+        <div class="profile"><h2>V</h2></div>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="container1">
+        <div class="container1first">
+          <p>Your Library</p>
+          <button id="CreateButton">Create</button>
+        </div>
+
+        <div class="container1second">
+          <div class="leftsubcontainer" onclick="upadteitemsinbox('liked')">
+            <img src="img/heart.png" height="25px" />
+            <p>Liked Songs</p>
+          </div>
+          <div
+            class="leftsubcontainer"
+            onclick="upadteitemsinbox('savedAlbum')"
+          >
+            <img src="img/saved.png" height="25px" />
+            <p>Saved Albums</p>
+          </div>
+          <div class="leftsubcontainer" onclick="upadteitemsinbox('artists')">
+            <img src="img/artist.png" height="25px" />
+            <p>Your Artists</p>
+          </div>
+          <div class="leftsubcontainer">
+            <img src="img/artist.png" height="25px" />
+            <p>Playing Album</p>
+          </div>
+        </div>
+
+        <div class="leftList1" id="box-2-container">
+          <div class="subelement">
+            <div class="art" id="artistandtrack">
+              <img src="img/See The Light.jpg" />
+            </div>
+            <p>Next Life</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container2" id="songs-box">
+        <div class="container_middel1">
+          <div class="submid1">
+            <img src="img/burger-bar.png" height="30px" >
+            <button>All</button>
+            <button>Music</button>
+            <button>Podcasts</button>
+          </div>
+          <div class="submid2">
+            <div class="sub-box">
+              <img src="img/Liked Songs.jpg" alt="" height="50px" />
+              <p>Liked Songs</p>
+            </div>
+            <div class="sub-box">
+              <img src="img/sadbois.jpg" alt="" height="50px" />
+              <p>SadBios</p>
+            </div>
+            <div class="sub-box">
+              <img src="img/Artists/Martin Garrix.jpg" alt="" height="50px" />
+              <p>Martin Garrix</p>
+            </div>
+            <div class="sub-box">
+              <img src="img/coverart3.jpg" alt="" height="50px" />
+              <p>Zehan</p>
+            </div>
+            <div class="sub-box">
+              <img src="img/Artists/Avicii.jpg" alt="" height="50px" />
+              <p>Avicii</p>
+            </div>
+            <div class="sub-box">
+              <img src="img/Pretend Your'e Mine.jpg" alt="" height="50px" />
+              <p>Pretend You're Mine</p>
+            </div>
+            <div class="sub-box">
+              <img src="img/Summer Last Year.jpg" alt="" height="50px" />
+              <p>Summer Last Year</p>
+            </div>
+            <div class="sub-box">
+              <img src="img/coverart2.jpg" alt="" height="50px" />
+              <p>Carry You</p>
+            </div>
+          </div>
+          <p id="madefor">Made for</p>
+        </div>
+
+        <!-- <div class="container_middel2">
+          <div class="section-title"><h1>vineet purohit</h1></div>
+          <div class="cards">
+            <div class="music-card">
+              <div class="sub-card">
+                <img src="img/Rabba.jpg" /><img
+                  src="img/play2.png"
+                  class="greenplaybtn"
+                />
+              </div>
+              <div class="p"><h2>Rabba</h2></div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="container3">
+        <p id="title">Next Life</p>
+        <div class="huge-coverart">
+          <img src="img/Next Life.jpg" height="100%" />
+        </div>
+        <div class="songname">Next Life</div>
+        <div
+          class="abouttheartist"
+          style="
+            background-image: url(img/sadbois\ cover.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <p style="font-size: 16px; color: rgb(236, 236, 236)">
+            About the Artist
+          </p>
+          <!-- <p style="color: rgb(133, 133, 133); font-size: 14px;" >
+            Sadbois is an emotionally raw, indie-leaning artist known for
+            melancholic melodies, soft vocals, and deeply introspective lyrics.
+            Their music explores heartbreak, nostalgia, loneliness, and
+            late-night thoughts, blending lo-fi, indie pop, and alternative
+            vibes that resonate with listeners seeking comfort in sadness.
+          </p> -->
+        </div>
+        <div class="credits"></div>
+      </div>
+    </div>
+    <div class="playerwindow">
+      <div class="subplayer">
+        <div class="art"><img src="img/Next Life.jpg" height="100%" /></div>
+        <p>Next Life</p>
+      </div>
+      <div class="subplayer" id="player-mainbox">
+        <div class="controls">
+          <img src="img/suffle.png" height="25px" class="controlbuttons" />
+          <img src="img/previous.png" height="20px" class="controlbuttons" />
+          <img
+            src="img/play.png"
+            height="35px"
+            id="playpausebtn"
+            class="controlbuttons"
+            class="play"
+          />
+          <img src="img/next.png" height="20px" class="controlbuttons" />
+          <img src="img/repeat.png" height="20px" class="controlbuttons" />
+        </div>
+        <div class="progressAndDisplay">
+          <p id="progressedLength">0:00</p>
+          <input type="range" value="0" id="song_progress" />
+          <p id="totalLength">00:00</p>
+        </div>
+        <audio src="/Songs/Next Life.mp3" id="audio-player"></audio>
+      </div>
+      <div class="subplayer" id="volume_mainbox">
+        <img src="img/volume.png" height="20px" />
+        <input
+          type="range"
+          value="0"
+          id="volume"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+      </div>
+    </div>
+    <div class="CreatePopupBoxContainer" id="modelbox">
+      <div class="popup">
+        <input type="text" placeholder="Name" />
+        <button>Add Image</button>
+        <div class="lower">
+          <button id="close">Close</button>
+          <button id="create">Create</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
